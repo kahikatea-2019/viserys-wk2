@@ -33,7 +33,6 @@ const data = {
 }
 router.get('/', (req, res) => {
   res.render('add', data)
-  // res.send('add page')
 })
 router.post('/', (req, res) => {
   console.log(req.body.name)

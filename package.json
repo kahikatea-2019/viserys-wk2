@@ -1,0 +1,30 @@
+{
+  "name": "viserys-wk2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kahikatea-2019/viserys-wk2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kahikatea-2019/viserys-wk2/issues"
+  },
+  "homepage": "https://github.com/kahikatea-2019/viserys-wk2#readme",
+  "devDependencies": {
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2"
+  }
+}

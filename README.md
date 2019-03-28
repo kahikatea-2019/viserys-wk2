@@ -2,7 +2,7 @@
 
 <h1>devFighter</h1>
 
-**MVP:**
+<h2>**MVP:**</h2>
 
 As a user: I want to be able to view a list of  profile summaries when I visit the home page. 
 
@@ -18,7 +18,7 @@ As a user: I want to be able to add a new profile when I click submit on the add
 - I want to be able to add a name, energy level and image
 - As a user if i choose not to link an image I want a default image to display
 
-**STRETCH:** 
+<h2>**STRETCH:** </h2>
 
 As a user: I want to be able add more properties to my profile
  - I want to be able to add: Alignment, Background Story, Special Skills

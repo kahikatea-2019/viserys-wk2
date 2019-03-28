@@ -1,1 +1,14 @@
-{{profiles}}
+<form class="form" action="/add" method="post">
+  <label for="name" class="form-item">
+    Name:
+    <input type="text" name="name" value="">
+  </label>
+   <br>
+  <label for="image" class="form-item">
+    Image url:
+    <input type="text" name="image" value="">
+  </label>
+  {{>energyForm}}
+  <br>
+  <input type="submit" name="" value="Submit">
+</form>

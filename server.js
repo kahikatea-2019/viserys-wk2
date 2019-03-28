@@ -14,6 +14,7 @@ const addRouter = require('./routes/addRoutes')
 
 server.use('/add', addRouter)
 //server.use('/', homeRouter)
+server.use(express.static('public'))
 
 module.exports = server
 

@@ -32,8 +32,8 @@ const data = {
   ]
 }
 router.get('/',(req,res)=>{
-  // res.render('add',data)
-  res.send('add page')
+  res.render('add',data)
+  //res.send('add page')
 })
 router.post('/',(req,res)=>{
   //res.render()

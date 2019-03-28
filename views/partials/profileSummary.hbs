@@ -2,13 +2,14 @@
 <!-- CONTAINERS FOR PROFILE SUMMARY-->
       <div class="container">
   <!-- PROFILE SUMMARY PARTIAL BELOW HERE-->
+  {{#each profiles}}
             <div class="row">
                 <div class="col-2"></div>
               <div class="col-8 profile-summary">
 
                 <div class="col1"></div>
                 <div class="col10">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDTIn2eltdmlWhDEHOIKEtSD6Ks1AoiBIDFQeY3pst0UIlPHzT" class="profile-img">
+                    <a href="/profile/{{id}}"><img src="{{image}}" class="profile-img"></a>
                     <br>
                     Name: {{name}} <br>
                     Energy:{{energy}}<br>
@@ -18,5 +19,6 @@
               </div>
               <div class="col-2"></div>
           </div>
+  {{/each}}
   <!-- PROFILE SUMMARY END HERE-->
         </div>

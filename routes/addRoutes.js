@@ -31,11 +31,13 @@ const data = {
     }
   ]
 }
-router.get('/',(req,res)=>{
-  res.render('add',data)
-  //res.send('add page')
+router.get('/', (req, res) => {
+  res.render('add', data)
+  // res.send('add page')
 })
-router.post('/',(req,res)=>{
-  //res.render()
+router.post('/', (req, res) => {
+  console.log(req.body.name)
+  console.log(req.body.energy)
+  // res.render()
   res.send('Thank you for adding')
 })

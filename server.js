@@ -12,9 +12,11 @@ server.set('view engine', 'hbs')
 const addRouter = require('./routes/addRoutes')
 //const homeRouter = require('./routes/homeRoutes')
 
+
+server.use(express.urlencoded({ extended: false }))
+server.use(express.static('public'))
 server.use('/add', addRouter)
 //server.use('/', homeRouter)
-server.use(express.static('public'))
 
 module.exports = server
 

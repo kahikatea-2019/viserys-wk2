@@ -1,6 +1,21 @@
 const express = require('express')
+const hbs = require('express-handlebars')
 
 const server = express()
+
+server.engine('hbs', hbs({
+  defaultLayout: 'main',
+  extname: 'hbs'
+}))
+server.set('view engine', 'hbs')
+
+const addRouter = require('./routes/addRoutes')
+//const homeRouter = require('./routes/homeRoutes')
+
+server.use('/add', addRouter)
+//server.use('/', homeRouter)
+
+module.exports = server
 
 const data = {
   profiles: [
@@ -36,4 +51,3 @@ server.get('/', (req, res) => {
   res.send('Hello world')
 })
 
-module.exports = server

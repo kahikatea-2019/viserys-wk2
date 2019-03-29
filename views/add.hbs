@@ -6,12 +6,28 @@
     <input type="text" name="name" value="">
   </label>
    <br>
+
   <label for="image" class="form-item">
-    Image:
+    Image Url:
     <input type="text" name="image" value="">
   </label>
+  <br>
+  <label for="specialSkill" class="form-item">
+    specialSkill:
+    <input type="text" name="specialSkill" value="">
+  </label>
+
   {{>energyForm}}
+  {{>alignmentForm}}
+  <br>
+
+    <label for="backstory" class="form-item">
+   backstory:
+    <textarea  style = "color:blue"  type="text" name="backstory" value="">
+  </textarea >
+  <br>
   <br>
   <input type="submit" name="" value="Submit">
+
 </form>
 

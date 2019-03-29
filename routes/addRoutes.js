@@ -1,42 +1,27 @@
 const express = require('express')
 const router = express.Router()
+const dataFunctions = require('../dataFunctions')
+
+const dataFilePath = '../data.json'
 
 module.exports = router
-const data = {
-  profiles: [
-    {
-      id: 1,
-      name: 'Raj',
-      image: 'url',
-      energy: 'medium',
-      specialSkills: [
-        'nunchucks',
-        'daydreamer'
-      ],
-      alignment: 'evil',
-      backstory: 'very prepared'
-    },
-    {
-      id: 2,
-      name: 'Amy',
-      image: 'url',
-      energy: 'high',
-      specialSkills: [
-        'cleaning',
-        'shadiness',
-        'sleeping'
-      ],
-      alignment: 'evil',
-      backstory: 'mysterious'
-    }
-  ]
-}
+
 router.get('/', (req, res) => {
-  res.render('add', data)
+  res.render('add')
 })
+
 router.post('/', (req, res) => {
-  console.log(req.body.name)
-  console.log(req.body.energy)
-  // res.render()
-  res.send('Thank you for adding')
+  const newProfile = {}
+
+  dataFunctions.readFile(dataFilePath, (contents) => {
+    const data = dataFunctions.jsonToJs(contents)
+
+    // add new profile
+    data.profiles.push(newProfile)
+    const newContents = dataFunctions.jsToJson(data)
+
+    dataFunctions.writeFile(newContents, dataFilePath, () => {
+      res.redirect('/')
+    })
+  })
 })

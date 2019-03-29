@@ -6,13 +6,25 @@
             <div class="row">
                 <div class="col-2"></div>
               <div class="col-8 profile-summary">
-
                 <div class="col1"></div>
                 <div class="col10">
                     <a href="/profile/{{id}}"><img src="{{image}}" class="profile-img"></a>
                     <br>
                     <h5>Name: {{name}}</h5><br>
-                    <h5>Energy:{{energy}}</h5><br>
+                   
+                    <h5>Energy:{{energy.value}}</h5>
+                     {{#if energy.high}}
+                      <img src="http://www.clker.com/cliparts/S/K/y/y/C/k/green-bar-hi.png" class="profile-img">
+                    {{/if}}
+                    {{#if energy.medium}}
+                      <img src="https://static1.squarespace.com/static/5b1697a2ec4eb741d86e62a4/t/5b173664352f53e777c76824/1528593776199/orange.jpg?format=2500w" class="profile-img">
+                    {{/if}}
+                    {{#if energy.low}}
+                      <img src="http://www.sidestreetgrillmemphis.com/images/500/magnoliacolor-9937.960.260.crop.png" class="profile-img">
+                    {{/if}}
+                    
+                    <br>
+    
                     <h5>Alignment: {{alignment}}</h5><br>
                 </div>
                 <div class="col1"></div>
@@ -22,3 +34,16 @@
   {{/each}}
   <!-- PROFILE SUMMARY END HERE-->
         </div>
+        
+
+<!--
+  Green
+  https://www.google.co.nz/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj6l_i2mqbhAhWv7XMBHXRnC8wQjRx6BAgBEAU&url=https%3A%2F%2Fcatfilmfestival.com%2Fcontact&psig=AOvVaw0ywxo-6hsWWknepGTtFiUr&ust=1553909572958283
+
+  Yellow 
+  https://static1.squarespace.com/static/5779e6a8be65944fd9c3ae05/t/59633127b3db2b7eda3f40e9/1499672872887/gold+box+1000+x+300.png?format=2500w
+
+  Red
+  http://www.sidestreetgrillmemphis.com/images/500/magnoliacolor-9937.960.260.crop.png
+
+  

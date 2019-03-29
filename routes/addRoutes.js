@@ -11,12 +11,19 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const newProfile = {}
-
   dataFunctions.readFile(dataFilePath, (contents) => {
     const data = dataFunctions.jsonToJs(contents)
 
     // add new profile
+    let newProfile = {
+    id: data.profiles.length + 1,
+    name: req.body.name,
+    image: req.body.image,
+    energy: req.body.energy
+    // specialSkills:req.body.specialSkills,
+    // alignment:req.body.alignment,
+    // backstory:req.body.backstory
+  }
     data.profiles.push(newProfile)
     const newContents = dataFunctions.jsToJson(data)
 

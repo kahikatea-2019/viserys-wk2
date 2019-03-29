@@ -24,12 +24,11 @@ router.post('/', (req, res) => {
         high: req.body.energy === 'high',
         medium: req.body.energy === 'medium',
         low: req.body.energy === 'low'
-      }
+      },
 
-
-    // specialSkills:req.body.specialSkills,
-    // alignment:req.body.alignment,
-    // backstory:req.body.backstory
+      specialSkills: req.body.specialSkill,
+      alignment: req.body.alignment,
+      backstory: req.body.backstory
     }
     data.profiles.push(newProfile)
     const newContents = dataFunctions.jsToJson(data)

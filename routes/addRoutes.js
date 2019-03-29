@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const dataFunctions = require('../dataFunctions')
 
-const dataFilePath = '../data.json'
+const dataFilePath = './data.json'
 
 module.exports = router
 
@@ -16,14 +16,14 @@ router.post('/', (req, res) => {
 
     // add new profile
     let newProfile = {
-    id: data.profiles.length + 1,
-    name: req.body.name,
-    image: req.body.image,
-    energy: req.body.energy
+      id: data.profiles.length + 1,
+      name: req.body.name,
+      image: req.body.image,
+      energy: req.body.energy
     // specialSkills:req.body.specialSkills,
     // alignment:req.body.alignment,
     // backstory:req.body.backstory
-  }
+    }
     data.profiles.push(newProfile)
     const newContents = dataFunctions.jsToJson(data)
 

@@ -2,12 +2,11 @@ const express = require('express')
 const router = express.Router()
 const dataFunctions = require('../dataFunctions')
 
-const dataFilePath = '../data.json'
+const dataFilePath = './data.json'
 
 module.exports = router
 
 router.get('/', (req, res) => {
-
   dataFunctions.readFile(dataFilePath, (contents) => {
     const data = dataFunctions.jsonToJs(contents)
     res.render('home', data)

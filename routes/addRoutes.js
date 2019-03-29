@@ -19,7 +19,14 @@ router.post('/', (req, res) => {
       id: data.profiles.length + 1,
       name: req.body.name,
       image: req.body.image,
-      energy: req.body.energy
+      energy: {
+        value: req.body.energy,
+        high: req.body.energy === 'high',
+        medium: req.body.energy === 'medium',
+        low: req.body.energy === 'low'
+      }
+
+
     // specialSkills:req.body.specialSkills,
     // alignment:req.body.alignment,
     // backstory:req.body.backstory

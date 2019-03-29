@@ -34,7 +34,7 @@ const data = {
 module.exports = router
 
 router.get('/', (req, res) => {
-  res.send('<h1> Hello Me</h1>')
+  res.render('home', data)
 })
 
 router.get('/profile/:id', (req, res) => {

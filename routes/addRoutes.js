@@ -34,9 +34,25 @@ const data = {
 router.get('/', (req, res) => {
   res.render('add', data)
 })
+
+// router.post('/', (req, res) => {
+//   console.log(req.body.name)
+//   console.log(req.body.energy)
+//   // res.render()
+//   res.send('Thank you for adding')
+// })
+
 router.post('/', (req, res) => {
-  console.log(req.body.name)
-  console.log(req.body.energy)
-  // res.render()
-  res.send('Thank you for adding')
+  let newName = {
+    id: data.profiles.length + 1,
+    name: req.body.name,
+    image: req.body.image,
+    energy: req.body.energy
+    // specialSkills:req.body.specialSkills,
+    // alignment:req.body.alignment,
+    // backstory:req.body.backstory
+  }
+  data.profiles.push(newName)
+  res.redirect('/')
+  console.log(data.profiles)
 })
